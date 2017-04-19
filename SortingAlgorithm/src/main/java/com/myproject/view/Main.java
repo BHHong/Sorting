@@ -28,8 +28,9 @@ public class Main {
 		Collections.shuffle(Arrays.asList(arr));
 		Sort.bubbleSort(arr);
 		
-
-		
+		System.out.println();
+		Collections.shuffle(Arrays.asList(arr));
+		Sort.mergeSort(arr);
 	}
 
 }

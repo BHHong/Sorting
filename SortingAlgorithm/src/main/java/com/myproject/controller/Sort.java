@@ -60,6 +60,50 @@ public class Sort {
 		System.out.println("Total loop: " + count3);
 	}
 
+	public static void mergeSort(Comparable array[]) {
+		System.out.println("Before Merge Sort");
+		System.out.println(Arrays.toString(array));
+		System.out.println("Start Merge Sort");
+		mergeSorting(array, 0, array.length - 1);
+	}
+
+	private static void mergeSorting(Comparable array[], int first, int last) {
+		int mid = (first + last) / 2;
+
+		// recursively break array into subarrays and sort
+		if (first < last) {
+			mergeSorting(array, first, mid);
+			mergeSorting(array, mid + 1, last);
+		}
+
+		// merge sorted subarrays
+		int i = 0, f = first, l = mid + 1;
+		Comparable[] temp = new Comparable[last - first + 1];
+
+		while (f <= mid && l <= last) {
+			temp[i++] = isLess(array[f], array[l]) ? array[f++] : array[l++];
+			System.out.println("a: " + Arrays.toString(temp));
+		}
+
+		while (f <= mid) {
+			temp[i++] = array[f++];
+			System.out.println("b: " + Arrays.toString(temp));
+		}
+
+		while (l <= last) {
+			temp[i++] = array[l++];
+			System.out.println("c: " + Arrays.toString(temp));
+		}
+
+		i = 0;
+		f = first;
+		l = last;
+		while (f <= l) {
+			array[f++] = temp[i++];
+		}
+		System.out.println(Arrays.toString(array));
+	}
+
 	private static boolean isLess(Comparable j, Comparable k) {
 		int comparison = j.compareTo(k);
 		return comparison < 0;
