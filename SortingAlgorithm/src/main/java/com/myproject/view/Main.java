@@ -13,19 +13,20 @@ public class Main {
 		Double[] doubleArray = {1.11,2.22,3.33,4.44,5.55,6.66};
 		String[] stringArray = {"Jacky", "Aaron", "James", "Queen", "Keele", "Baron"};
 		
-		Comparable[] arr = doubleArray;
+		// change for array with different data type
+		Comparable[] arr = charArray;
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new Sort().bubbleSort(arr);
+		Sort.bubbleSort(arr);
 
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new Sort().insertionSort(arr);
+		Sort.insertionSort(arr);
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new Sort().selectionSort(arr);
+		Sort.selectionSort(arr);
 		
 
 		

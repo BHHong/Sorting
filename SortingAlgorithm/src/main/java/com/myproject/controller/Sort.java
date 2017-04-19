@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Sort {
 
-	public void bubbleSort(Comparable array[]) {
+	public static void bubbleSort(Comparable array[]) {
 		System.out.println("Before Bubble Sort");
 		System.out.println(Arrays.toString(array));
 		System.out.println("Start Bubble Sort");
@@ -20,7 +20,7 @@ public class Sort {
 		System.out.println(Arrays.toString(array));
 	}
 
-	public void insertionSort(Comparable array[]) {
+	public static void insertionSort(Comparable array[]) {
 		System.out.println("Before Insertion Sort");
 		System.out.println(Arrays.toString(array));
 		System.out.println("Start Insertion Sort");
@@ -38,7 +38,7 @@ public class Sort {
 		System.out.println(Arrays.toString(array));
 	}
 	
-	public void selectionSort(Comparable array[]) {
+	public static void selectionSort(Comparable array[]) {
 		System.out.println("Before Selection Sort");
 		System.out.println(Arrays.toString(array));
 		System.out.println("Start Selection Sort");
@@ -56,12 +56,12 @@ public class Sort {
 		System.out.println(Arrays.toString(array));
 	}
 
-	private boolean isLess(Comparable j, Comparable k) {
+	private static boolean isLess(Comparable j, Comparable k) {
 		int comparison = j.compareTo(k);
 		return comparison < 0;
 	}
 
-	private void swap(Comparable[] array, int j, int k) {
+	private static void swap(Comparable[] array, int j, int k) {
 		Comparable temp = array[j];
 		array[j] = array[k];
 		array[k] = temp;
