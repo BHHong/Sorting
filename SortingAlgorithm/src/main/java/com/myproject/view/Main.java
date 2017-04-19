@@ -3,9 +3,7 @@ package com.myproject.view;
 import java.util.Arrays;
 import java.util.Collections;
 
-import com.myproject.controller.BubbleSort;
-import com.myproject.controller.InsertionSort;
-import com.myproject.controller.SelectionSort;
+import com.myproject.controller.Sort;
 
 public class Main {
 
@@ -17,16 +15,18 @@ public class Main {
 		
 		Comparable[] arr = doubleArray;
 		
+		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new InsertionSort().sort(arr);
+		new Sort().bubbleSort(arr);
+
+		System.out.println();
+		Collections.shuffle(Arrays.asList(arr));
+		new Sort().insertionort(arr);
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new SelectionSort().sort(arr);
+		new Sort().selectionSort(arr);
 		
-		System.out.println();
-		Collections.shuffle(Arrays.asList(arr));
-		new BubbleSort().sort(arr);
 
 		
 	}
