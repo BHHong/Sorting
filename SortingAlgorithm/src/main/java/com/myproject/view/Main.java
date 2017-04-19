@@ -18,15 +18,15 @@ public class Main {
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		Sort.bubbleSort(arr);
-
-		System.out.println();
-		Collections.shuffle(Arrays.asList(arr));
 		Sort.insertionSort(arr);
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
 		Sort.selectionSort(arr);
+		
+		System.out.println();
+		Collections.shuffle(Arrays.asList(arr));
+		Sort.bubbleSort(arr);
 		
 
 		
