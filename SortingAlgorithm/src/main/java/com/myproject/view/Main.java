@@ -21,7 +21,7 @@ public class Main {
 
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));
-		new Sort().insertionort(arr);
+		new Sort().insertionSort(arr);
 		
 		System.out.println();
 		Collections.shuffle(Arrays.asList(arr));

@@ -20,7 +20,7 @@ public class Sort {
 		System.out.println(Arrays.toString(array));
 	}
 
-	public void insertionort(Comparable array[]) {
+	public void insertionSort(Comparable array[]) {
 		System.out.println("Before Insertion Sort");
 		System.out.println(Arrays.toString(array));
 		System.out.println("Start Insertion Sort");
